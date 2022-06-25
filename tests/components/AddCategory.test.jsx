@@ -5,7 +5,7 @@ describe("Pruebas en <AddCategory />", () => {
 	const value = "Pokémon";
 
 	test("Debe de cambiar el valor de la caja de texto", () => {
-		render(<AddCategory onNewCategory={() => {}} />);
+		render(<AddCategory onNewCategory={() => { }} />);
 		const input = screen.getByRole("textbox");
 		fireEvent.change(input, { target: { value } });
 		expect(input.value).toBe(value);
